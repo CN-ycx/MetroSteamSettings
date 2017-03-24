@@ -1,11 +1,11 @@
-Running
+运行
 ==================
 
-Make sure **Metro for Steam** is installed. Get the latest version from http://metroforsteam.com
+请确定 **Metro for Steam** 已经安装. 在 http://metroforsteam.com 获取最新版本
 
-Place the settings.exe in *Steam\skins\Metro for Steam* (or where you choose to extract the zip)
+将 settings.exe 放置在 *Steam\skins\Metro for Steam* 目录下 (或解压压缩包后的任意位置)
 
-Building
+编译
 ==================
 
-Open *Metro_for_Steam_Settings.sln* with Visual Studio 2012+ or Visual Studio Express for Windows Desktop 2012+ to get started. 
+使用 Visual Studio 2012+ 或 Visual Studio Express for Windows Desktop 2012+ 打开 *Metro_for_Steam_Settings.sln* 开始. 
