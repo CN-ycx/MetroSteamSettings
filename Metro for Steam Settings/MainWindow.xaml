@@ -2,7 +2,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="MainWindow"
-    Title="Settings" Height="500" Width="700" ResizeMode="NoResize" SnapsToDevicePixels="True" WindowStartupLocation="CenterScreen" Icon="Resources/SettingsApp.ico" Loaded="init">
+    Title="设置" Height="500" Width="700" ResizeMode="NoResize" SnapsToDevicePixels="True" WindowStartupLocation="CenterScreen" Icon="Resources/SettingsApp.ico" Loaded="init">
     <Window.Resources>
         <Color x:Key="PopupBackground">#334F53</Color>
         <SolidColorBrush x:Key="PopupBrush" Color="{StaticResource PopupBackground}"/>
@@ -207,7 +207,7 @@
                     <ControlTemplate TargetType="{x:Type RadioButton}">
                         <Grid Name="Border" Background="Transparent">
                             <Image Name="check" Source="Resources\circlecheck.png" Opacity="0" Height="36" Width="36"/>
-                            <TextBlock Name="label" Text="Custom…" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,1"/>
+                            <TextBlock Name="label" Text="自定义…" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,1"/>
                         </Grid>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsChecked" Value="true">
@@ -362,9 +362,9 @@
     <Grid>
         <Grid Background="#25393D" Name="contentGrid">
             <TabControl Background="#fff" Padding="0" BorderThickness="0" TabStripPlacement="Left" Margin="-2,-2,0,0">
-                <TabItem Style="{DynamicResource navTab}" Header="Accent color">
+                <TabItem Style="{DynamicResource navTab}" Header="主题颜色">
                     <StackPanel Style="{DynamicResource contentStackPanel}">
-                        <Label Style="{DynamicResource header}" Content="Accent color"/>
+                        <Label Style="{DynamicResource header}" Content="主题颜色"/>
                         <StackPanel Name="accentColorRadios" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                             <RadioButton Name="color0" GroupName="accentColor" Style="{DynamicResource accentColor}">
                                 <Rectangle Fill="#DC4FAD"/>
@@ -410,46 +410,44 @@
                         </Grid>
                     </StackPanel>
                 </TabItem>
-                <TabItem Style="{DynamicResource navTab}" Header="Friends list">
+                <TabItem Style="{DynamicResource navTab}" Header="好友列表">
                     <StackPanel Style="{DynamicResource contentStackPanel}">
-                        <Label Style="{DynamicResource header}" Content="Friends list"/>
+                        <Label Style="{DynamicResource header}" Content="好友列表"/>
                         <StackPanel Orientation="Horizontal">
-                            <RadioButton Name="friendslist0" GroupName="friendsList" Style="{DynamicResource friendsList}" IsChecked="True" ToolTip="Fat">
+                            <RadioButton Name="friendslist0" GroupName="friendsList" Style="{DynamicResource friendsList}" IsChecked="True" ToolTip="有用户头像与搜索框的界面">
                                 <Image Source="Resources/friendslist0.png"/>
                             </RadioButton>
-                            <RadioButton Name="friendslist1" GroupName="friendsList" Style="{DynamicResource friendsList}" ToolTip="Chubby">
+                            <RadioButton Name="friendslist1" GroupName="friendsList" Style="{DynamicResource friendsList}" ToolTip="只有搜索框的界面">
                                 <Image Source="Resources/friendslist1.png"/>
                             </RadioButton>
-                            <RadioButton Name="friendslist2" GroupName="friendsList" Style="{DynamicResource friendsList}" ToolTip="Slim">
+                            <RadioButton Name="friendslist2" GroupName="friendsList" Style="{DynamicResource friendsList}" ToolTip="空白的界面">
                                 <Image Source="Resources/friendslist2.png"/>
                             </RadioButton>
                         </StackPanel>
                     </StackPanel>
                 </TabItem>
-                <TabItem Style="{DynamicResource navTab}" Header="Font">
+                <TabItem Style="{DynamicResource navTab}" Header="字体">
                     <StackPanel Style="{DynamicResource contentStackPanel}">
-                        <Label Style="{DynamicResource header}" Content="Font"/>
+                        <Label Style="{DynamicResource header}" Content="字体"/>
                         <ListView Name="fontList" Style="{StaticResource listView}"/>
                         <StackPanel Margin="0,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Center">
-                            <Button Content="Default" Click="resetFont"/>
+                            <Button Content="恢复默认" Click="resetFont"/>
                         </StackPanel>
                     </StackPanel>
                 </TabItem>
-                <TabItem Style="{DynamicResource navTab}" Header="Grid view">
+                <TabItem Style="{DynamicResource navTab}" Header="网格视图">
                     <StackPanel Style="{DynamicResource contentStackPanel}">
-                        <Label Style="{DynamicResource header}" Content="Grid view"/>
-                        <TextBlock Margin="0,0,0,8">
-                                When a game is not installed:
-                        </TextBlock>
-                        <CheckBox Name="uninstallIndicator" Content="Display an indicator icon" Style="{DynamicResource MetroCheckbox}"/>
-                        <CheckBox Name="uninstallDim" Content="Dim the art" Style="{DynamicResource MetroCheckbox}"/>
+                        <Label Style="{DynamicResource header}" Content="网格视图"/>
+                        <TextBlock Margin="0,0,0,8"><Run Text="当一个游戏没有被安装时"/><Run Text=":"/></TextBlock>
+                        <CheckBox Name="uninstallIndicator" Content="显示图标" Style="{DynamicResource MetroCheckbox}"/>
+                        <CheckBox Name="uninstallDim" Content="背景虚化" Style="{DynamicResource MetroCheckbox}"/>
                     </StackPanel>
                 </TabItem>
-                <TabItem Style="{DynamicResource navTab}" Header="Decal">
+                <TabItem Style="{DynamicResource navTab}" Header="背景花纹">
                     <StackPanel Style="{DynamicResource contentStackPanel}">
-                        <Label Style="{DynamicResource header}" Content="Decal"/>
+                        <Label Style="{DynamicResource header}" Content="背景花纹"/>
                         <StackPanel Orientation="Horizontal">
-                            <RadioButton ToolTip="Default" Name="decal_default" GroupName="decalGroup" Style="{DynamicResource decalStyle}" IsChecked="True">
+                            <RadioButton ToolTip="默认" Name="decal_default" GroupName="decalGroup" Style="{DynamicResource decalStyle}" IsChecked="True">
                                 <Image Source="Resources/decal_default.png"/>
                             </RadioButton>
                             <RadioButton Name="decal0" GroupName="decalGroup" Style="{DynamicResource decalStyle}">
@@ -470,45 +468,42 @@
                             <RadioButton Name="decal5" GroupName="decalGroup" Style="{DynamicResource decalStyle}">
                                 <Image Source="Resources/decal_5.png"/>
                             </RadioButton>
-                            <RadioButton ToolTip="No decal" Name="decal6" GroupName="decalGroup" Style="{DynamicResource decalStyle}">
+                            <RadioButton ToolTip="无背景" Name="decal6" GroupName="decalGroup" Style="{DynamicResource decalStyle}">
                                 <Rectangle Fill="#FF101010" />
                             </RadioButton>
                         </StackPanel>
                     </StackPanel>
                 </TabItem>
-                <TabItem Style="{DynamicResource navTab}" Header="About">
+                <TabItem Style="{DynamicResource navTab}" Header="关于">
                     <StackPanel Style="{DynamicResource contentStackPanel}">
-                        <Label Style="{DynamicResource header}" Content="About"/>
+                        <Label Style="{DynamicResource header}" Content="关于"/>
                         <TextBlock Name="appVersionLabel"/>
-                        <TextBlock>
-                            Created by
-                            <Hyperlink Foreground="#0072C6" NavigateUri="http://soapyhamhocks.deviantart.com" Click="openLink">SoapyHamHocks</Hyperlink>
-                        </TextBlock>
+                        <TextBlock><Run Text="由 "/><Hyperlink Foreground="#FF0072C6" NavigateUri="http://soapyhamhocks.deviantart.com/"><Run Text="SoapyHamHocks"/></Hyperlink><Run Text=" 创建"/></TextBlock>
+                        <TextBlock><Run Text="简体中文由 "/><Hyperlink Foreground="#FF0072C6" NavigateUri="http://www.chinalcmod.com/"><Run Text="ycx Studios"/></Hyperlink><Run Text=" 翻译"/></TextBlock>
                         <StackPanel Margin="0,12">
-                            <TextBlock>
-                                Find this application useful? Consider making a small donation.
-                            </TextBlock>
+                            <TextBlock Text="感觉这个程序有用? 考虑捐赠作者吧!"/>
                             <Button Content="PayPal" Margin="0,5" Style="{DynamicResource donateButton}" HorizontalAlignment="Left" Click="openDonateLink"/>
                         </StackPanel>
                         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
                             <StackPanel Name="updatesLabel" Visibility="Collapsed" Orientation="Horizontal">
                                 <TextBlock>
-                                    An update is available. Grab the latest copy from
-                                    <Hyperlink Foreground="#0072C6" NavigateUri="https://github.com/SoapyHamHocks/MetroSteamSettings/releases" Click="openLink">github.com</Hyperlink>
+                                    更新可用. 从 
+                                    <Hyperlink Foreground="#0072C6" NavigateUri="https://github.com/CN-ycx/MetroSteamSettings/releases" Click="openLink">GitHub</Hyperlink>
+                                    下载最新副本
                                 </TextBlock>
                             </StackPanel>
                             <StackPanel VerticalAlignment="Center">
-                                <TextBlock Visibility="Collapsed" Name="noUpdatesLabel" Text="You are already running the latest version."/>
-                                <TextBlock Visibility="Collapsed" Name="noConnection" Text="Can't connect to the update server."/>
-                                <Button Name="checkUpdatesButton" Click="checkUpdates" Content="Check for updates" Width="130px"/>
+                                <TextBlock Visibility="Collapsed" Name="noUpdatesLabel" Text="你正在运行的是最新版本."/>
+                                <TextBlock Visibility="Collapsed" Name="noConnection" Text="无法连接到更新服务器."/>
+                                <Button Name="checkUpdatesButton" Click="checkUpdates" Content="检查更新" Width="130px"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
                 </TabItem>
             </TabControl>
             <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Orientation="Horizontal">
-                <Button Name="dlgOKbutton" Content="OK" Margin="0,8" Click="uninit"/>
-                <Button Content="Cancel" Margin="8" Click="closeDlg" IsCancel="True"/>
+                <Button Name="dlgOKbutton" Content="保存更改" Margin="0,8" Click="uninit"/>
+                <Button Content="放弃更改" Margin="8" Click="closeDlg" IsCancel="True"/>
             </StackPanel>
         </Grid>
         <Grid Name="warningPopup" Background="{StaticResource PopupFadeBrush}" Visibility="Collapsed">
@@ -522,7 +517,7 @@
                     <TextBlock Grid.Row="1" Name="messageContents" FontSize="14" Foreground="#fff"/>
                 </Grid>
                 <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,24,24">
-                    <Button Name="popupOKbutton" Style="{DynamicResource popupButton}" Content="OK"/>
+                    <Button Name="popupOKbutton" Style="{DynamicResource popupButton}" Content="确定"/>
                 </StackPanel>
             </Grid>
         </Grid>
@@ -533,13 +528,13 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0" Margin="24,24,24,0">
-                    <TextBlock Text="The following skins have been detected" FontSize="22" Foreground="#fff" Margin="0,0,0,16"/>
-                    <TextBlock Text="Select a skin to continue" FontSize="16" Foreground="#fff" Margin="0,0,0,16"/>
+                    <TextBlock Text="已检测到以下皮肤" FontSize="22" Foreground="#fff" Margin="0,0,0,16"/>
+                    <TextBlock Text="选择一个皮肤继续" FontSize="16" Foreground="#fff" Margin="0,0,0,16"/>
                 </StackPanel>
                 <StackPanel Grid.Row="1" HorizontalAlignment="Center" Width="600">
                     <ListView Style="{StaticResource listViewInverted}" Name="skinListViewbox"/>
                     <StackPanel HorizontalAlignment="Right" Margin="0,24,0,0">
-                        <Button Name="skinListOKButton" Style="{StaticResource popupButton}" Content="Select" Click="skinListClose" IsDefault="True"/>
+                        <Button Name="skinListOKButton" Style="{StaticResource popupButton}" Content="选择" Click="skinListClose" IsDefault="True"/>
                     </StackPanel>
                 </StackPanel>
             </Grid>

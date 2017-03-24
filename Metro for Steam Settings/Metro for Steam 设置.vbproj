@@ -7,8 +7,8 @@
     <ProjectGuid>{84C5B236-706A-4A4C-ADFF-7EBD26C82131}</ProjectGuid>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Metro_for_Steam_Settings</RootNamespace>
-    <AssemblyName>Metro for Steam Settings</AssemblyName>
+    <RootNamespace>Metro_for_Steam_Settings_sChinese</RootNamespace>
+    <AssemblyName>Metro for Steam 设置</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MyType>Custom</MyType>
     <PublishUrl>publish\</PublishUrl>
@@ -70,6 +70,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\SettingsApp.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />
@@ -146,6 +149,7 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>

@@ -134,7 +134,7 @@ Class MainWindow
     End Sub
 
     Private Sub init()
-        appVersionLabel.Text = "Version " + appVersion
+        appVersionLabel.Text = "版本 " + appVersion
         If System.IO.File.Exists("custom.styles") = False Then
             'Check if Steam is installed, if so get the path
             Try
@@ -145,13 +145,13 @@ Class MainWindow
                 End If
 
                 If String.IsNullOrEmpty(steamPath) Then
-                    Throw New Exception("Can't read Steam install location")
+                    Throw New Exception("无法读取 Steam 安装位置")
                 End If
 
                 foundSkins = New skinList(steamPath)
 
                 If foundSkins.count = 0 Then
-                    Throw New Exception("Skin is not installed. Get the latest copy from www.metroforsteam.com")
+                    Throw New Exception("皮肤未安装. 在 www.metroforsteam.com 获取最新副本")
                 ElseIf foundSkins.count = 1 Then
                     skinPath = steamPath + "\skins\" + foundSkins.skinsDirectory(0).ToString + "\"
                 Else
@@ -388,7 +388,7 @@ Class MainWindow
         Dim webClient As New WebClient
         AddHandler webClient.DownloadStringCompleted, AddressOf subUIUpdate
 
-        webClient.DownloadStringAsync(New Uri("https://raw.github.com/SoapyHamHocks/MetroSteamSettings/master/version.txt"))
+        webClient.DownloadStringAsync(New Uri("https://raw.github.com/CN-ycx/MetroSteamSettings/master/version.txt"))
     End Sub
 
     Private Sub subUIUpdate(ByVal sender As Object, ByVal e As DownloadStringCompletedEventArgs)

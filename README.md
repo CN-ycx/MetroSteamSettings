@@ -8,4 +8,4 @@
 编译
 ==================
 
-使用 Visual Studio 2012+ 或 Visual Studio Express for Windows Desktop 2012+ 打开 *Metro_for_Steam_Settings.sln* 开始. 
+使用 Visual Studio 2012+ 或 Visual Studio Express for Windows Desktop 2012+ 打开 *Metro_for_Steam_Settings_sChinese.sln* 开始. 
