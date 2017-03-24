@@ -388,7 +388,7 @@ Class MainWindow
         Dim webClient As New WebClient
         AddHandler webClient.DownloadStringCompleted, AddressOf subUIUpdate
 
-        webClient.DownloadStringAsync(New Uri("https://raw.github.com/CN-ycx/MetroSteamSettings/master/version.txt"))
+        webClient.DownloadStringAsync(New Uri("https://raw.github.com/CN-ycx/MetroSteamSettings-sChinese/master/version.txt"))
     End Sub
 
     Private Sub subUIUpdate(ByVal sender As Object, ByVal e As DownloadStringCompletedEventArgs)

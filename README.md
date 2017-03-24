@@ -3,7 +3,7 @@
 
 请确定 **Metro for Steam** 已经安装. 在 http://metroforsteam.com 获取最新版本
 
-将 settings.exe 放置在 *Steam\skins\Metro for Steam* 目录下 (或解压压缩包后的任意位置)
+将设置程序放置在 *Steam\skins\Metro for Steam* 目录下 (或解压压缩包后的任意位置)
 
 编译
 ==================

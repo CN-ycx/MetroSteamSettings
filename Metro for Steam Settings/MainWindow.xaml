@@ -478,8 +478,16 @@
                     <StackPanel Style="{DynamicResource contentStackPanel}">
                         <Label Style="{DynamicResource header}" Content="关于"/>
                         <TextBlock Name="appVersionLabel"/>
-                        <TextBlock><Run Text="由 "/><Hyperlink Foreground="#FF0072C6" NavigateUri="http://soapyhamhocks.deviantart.com/"><Run Text="SoapyHamHocks"/></Hyperlink><Run Text=" 创建"/></TextBlock>
-                        <TextBlock><Run Text="简体中文由 "/><Hyperlink Foreground="#FF0072C6" NavigateUri="http://www.chinalcmod.com/"><Run Text="ycx Studios"/></Hyperlink><Run Text=" 翻译"/></TextBlock>
+                        <TextBlock>
+                            由
+                            <Hyperlink Foreground="#0072C6" NavigateUri="http://soapyhamhocks.deviantart.com" Click="openLink">SoapyHamHocks</Hyperlink>
+                            创建
+                        </TextBlock>
+                        <TextBlock>
+                            简体中文由
+                            <Hyperlink Foreground="#0072C6" NavigateUri="http://www.chinalcmod.com" Click="openLink">ycx Studios</Hyperlink>
+                            翻译
+                        </TextBlock>
                         <StackPanel Margin="0,12">
                             <TextBlock Text="感觉这个程序有用? 考虑捐赠作者吧!"/>
                             <Button Content="PayPal" Margin="0,5" Style="{DynamicResource donateButton}" HorizontalAlignment="Left" Click="openDonateLink"/>
@@ -488,7 +496,7 @@
                             <StackPanel Name="updatesLabel" Visibility="Collapsed" Orientation="Horizontal">
                                 <TextBlock>
                                     更新可用. 从 
-                                    <Hyperlink Foreground="#0072C6" NavigateUri="https://github.com/CN-ycx/MetroSteamSettings/releases" Click="openLink">GitHub</Hyperlink>
+                                    <Hyperlink Foreground="#0072C6" NavigateUri="https://github.com/CN-ycx/MetroSteamSettings-sChinese/releases" Click="openLink">GitHub</Hyperlink>
                                     下载最新副本
                                 </TextBlock>
                             </StackPanel>
